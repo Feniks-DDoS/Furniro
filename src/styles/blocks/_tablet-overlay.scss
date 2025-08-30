@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.tablet-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba($color: #000, $alpha: 0.9);
+    color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: rem(36);
+    z-index: 88888;
+    transition: var(--transition-duration);
+}

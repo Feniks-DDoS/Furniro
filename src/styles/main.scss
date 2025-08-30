@@ -1,0 +1,13 @@
+@use "./global";
+@use "./normalize";
+@use "./utils";
+@use "./fonts";
+@use "./variabels";
+
+@use "./blocks/header";
+@use "./blocks/burger-button";
+@use "./blocks/tablet-overlay";
+@use "./blocks/hero";
+@use "./blocks/hero-card";
+
+

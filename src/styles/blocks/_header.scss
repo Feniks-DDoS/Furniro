@@ -1,0 +1,106 @@
+@use '../helpers' as *;
+
+
+.header {
+
+    &__inner {
+        padding-block: rem(30);
+
+        @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: rem(16);
+        transition: var(--transition-duration);
+    }
+
+    &__logo {
+    transition: var(--transition-duration);    
+    @include hover {
+        filter: drop-shadow(rem(0) rem(0) rem(10) var(--color-primary));
+    }
+    }
+
+    &__list {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: rem(75);
+
+         @include laptop {
+            column-gap: rem(45);
+         }
+
+        @include tablet {
+            flex-direction: column;
+         }
+    }
+
+    &__link {
+        font-size: rem(16);
+
+        &.is-active {
+            color: var(--color-primary);
+            pointer-events: none;
+        }
+
+        @include hover {
+            color: var(--color-primary);
+        }
+    }
+
+    &__center {
+        @include tablet {
+            display: none;
+
+            &.overlay {
+            display: initial;
+        }
+        }
+
+    }
+
+    &__end {
+
+        @include tablet {
+            display: none;
+
+               &.overlay {
+            display: initial;
+        }
+        }
+
+        &-list {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: rem(45);
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        &-link {
+            @include hover {
+                scale: 1.1;
+                filter: drop-shadow(rem(0) rem(0) rem(10) var(--color-primary));
+            }
+
+            @include tablet {
+                filter: drop-shadow(rem(0) rem(0) rem(10) var(--color-light));
+            }
+        }
+    }
+}

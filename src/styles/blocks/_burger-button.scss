@@ -1,0 +1,54 @@
+@use '../helpers' as *;
+
+.burger-button {
+    border: rem(1) solid var(--color-primary);
+    padding: rem(10);
+    border-radius: rem(15);
+    width: rem(55);
+    height: rem(55);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: transparent;
+    gap: rem(9);
+
+
+    &.is-open {
+
+        box-shadow: rem(0) rem(0) rem(10) var(--color-primary);
+
+       .burger-button__line {
+
+            &:nth-child(2n) {
+                display: none;
+            }
+
+            &:first-child {
+                rotate: -225deg;
+                translate: 0% rem(5.5);
+            }
+            
+            &:last-child {
+                rotate: -315deg;
+                translate: 0% rem(-5.5);
+            }
+        }
+    }
+
+    @include mobile-s {
+        width: rem(45);
+        height: rem(45);
+    }
+
+    &__line {
+        width: 90%;
+        height: 6%;
+        color: var(--color-primary);
+        background-color: var(--color-primary);
+        border-radius: rem(10);
+        transition: var(--transition-duration);
+
+    }
+}
