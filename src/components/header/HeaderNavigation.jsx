@@ -9,7 +9,7 @@ const HeaderNavigation = () => {
     <nav className="header__menu">
       <div className="header__start">     
           <a href="/" className="header__link">
-          <img src="/icons/logo/logo.svg" 
+          <img src="./icons/logo/logo.svg" 
           alt="Home" 
           className="header__logo logo" 
           width={185} height={41}

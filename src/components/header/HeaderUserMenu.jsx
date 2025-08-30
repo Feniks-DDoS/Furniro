@@ -5,7 +5,7 @@ const HeaderUserMenu = ({className}) => {
         <ul className="header__end-list">
         <li className="header__end-item">
             <a href="/" className="header__end-link">
-            <img src="/icons/header/user-dashbord.svg" 
+            <img src="./icons/header/user-dashbord.svg" 
             aria-label="dashboard" 
             title="dashboard" width={28} height={28} 
             alt="dashboard"
@@ -14,7 +14,7 @@ const HeaderUserMenu = ({className}) => {
         </li>
         <li className="header__end-item">
             <a href="/" className="header__end-link">
-            <img src="/icons/header/favorite.svg" 
+            <img src="./icons/header/favorite.svg" 
             aria-label="wishlist" 
             title="wishlist" width={28} height={28} 
             alt="wishlist"
@@ -23,7 +23,7 @@ const HeaderUserMenu = ({className}) => {
         </li>
         <li className="header__end-item">
             <a href="/" className="header__end-link">
-            <img src="/icons/header/user-bag.svg" 
+            <img src="./icons/header/user-bag.svg" 
             aria-label="cart" 
             title="cart" 
             width={28} height={28} 

@@ -4,9 +4,9 @@ const Hero = () => {
         <div className="hero__inner">
             <div className="hero__main hidden-mobile">
                 <picture className="hero__images">
-                    <source srcSet="/images/hero/avif/hero.avif" type="image/avif"/>
+                    <source srcSet="./images/hero/avif/hero.avif" type="image/avif"/>
                     <img 
-                    src="/images/hero/jpg/hero.jpg" 
+                    src="./images/hero/jpg/hero.jpg" 
                     alt="" 
                     width={1440} height={716} 
                     loading="lazy" 
