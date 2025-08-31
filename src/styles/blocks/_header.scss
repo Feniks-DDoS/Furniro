@@ -2,9 +2,28 @@
 
 
 .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+    background-color: var(--color-light);
+    animation-name: HeaderFadeIn;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+    animation-range: rem(100) rem(200);
+
+    @keyframes HeaderFadeIn {
+        to {
+            box-shadow: rem(0) rem(0) rem(10) var(--color-primary);
+        }
+    }
 
     &__inner {
         padding-block: rem(30);
+
+        @include mobile {
+            padding-block: rem(15);
+        }
 
         @include tablet {
         display: flex;

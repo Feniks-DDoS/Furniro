@@ -1,0 +1,144 @@
+@use '../helpers' as *;
+
+
+.range {
+
+    &__inner {
+        display: grid;
+        row-gap: rem(62);
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        color: var(--color-gray);
+    }
+
+    &__body {
+        &-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rem(20);
+            
+
+            @include tablet {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);                
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    &__card {
+
+        @include tablet {
+            &:last-child {
+                grid-column: -1/1;
+            }
+        }
+  
+        &-inner {
+            display: grid;
+            row-gap: rem(30);
+            text-align: center;
+            transition: var(--transition-duration);
+           
+        }
+
+        &-title {
+            @include fluid-text(24, 18);
+            color: var(--color-dark-light);
+        }
+    }
+
+    &__image {
+        border-radius: rem(15);
+
+        @include tablet {
+            width: 100%;
+                max-height: rem(400);
+        }
+    }
+
+    &__images {
+      position: relative;
+
+      &.dining {
+            &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../../../public/images/range/avif/dining.avif');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition:0.4s;
+            opacity: 0;
+            border-radius: rem(15);
+        }
+        
+
+            @include hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+      } 
+      &.living {
+            &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../../../public/images/range/avif/living.avif');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition:0.4s;
+            opacity: 0;
+            border-radius: rem(15);
+        }
+        
+
+            @include hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+      } 
+      &.bedroom {
+            &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../../../public/images/range/avif/bedroom.avif');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition:0.4s;
+            opacity: 0;
+            border-radius: rem(15);
+        }
+        
+
+            @include hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+      }
+        
+    }
+}

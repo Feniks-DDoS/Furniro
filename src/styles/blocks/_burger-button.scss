@@ -17,6 +17,8 @@
 
     &.is-open {
 
+        position: fixed;
+        right: 5%;
         box-shadow: rem(0) rem(0) rem(10) var(--color-primary);
 
        .burger-button__line {

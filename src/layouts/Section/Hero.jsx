@@ -1,5 +1,7 @@
 const Hero = () => {
   return (
+    <section className="section">
+        <div className="section__inner">
     <div className="hero" aria-labelledby="card-title">
         <div className="hero__inner">
             <div className="hero__main hidden-mobile">
@@ -31,6 +33,8 @@ const Hero = () => {
             </div>
         </div>
     </div>
+    </div>
+    </section>
   )
 }
 
