@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+
+.button {
+
+    &--card {
+        padding: rem(12) rem(52);
+        border: none;
+        background-color: var(--color-light);
+        color: var(--color-primary);
+        font-weight: 600;
+        font-size: rem(16);
+        line-height: 1.5;
+
+        @include hover {
+            box-shadow: rem(0) rem(0) rem(10) var(--color-primary);
+        }
+
+        @include tablet {
+        border: rem(1) solid var(--color-primary);
+        }
+    }
+}
