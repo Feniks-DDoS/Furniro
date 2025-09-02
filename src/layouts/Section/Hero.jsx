@@ -26,7 +26,7 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="card__extra">
-                            <a href="/" className="card__button button">BUY Now</a>
+                            <a href="/" className="card__button button button--orange">BUY Now</a>
                         </div>
                     </div>
                 </div>

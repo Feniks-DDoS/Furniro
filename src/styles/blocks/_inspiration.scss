@@ -1,0 +1,51 @@
+@use '../helpers' as *;
+
+.inspiration {
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(16);
+        padding-block: rem(44);
+
+        @include tablet {
+            flex-direction: column;
+            justify-content: center;
+            gap: rem(32);
+        }
+    }
+
+    &__subtitle {
+        font-size: rem(16);
+        color: var(--color-gray-2);
+        line-height: 1.5;
+        padding-top: rem(8);
+        padding-bottom: rem(25);
+    }
+
+    &__slider {
+        position: relative;
+        max-width: rem(1200);
+        margin: 0 auto;
+        padding: rem(0) rem(0);
+        overflow: hidden;
+
+        @include tablet {
+            max-width: rem(720);
+        }
+
+        @include mobile {
+            overflow: visible;
+            max-width: rem(400);
+        }
+
+        @include mobile-s {
+            max-width: rem(300);
+        }
+    }
+
+    &__button {
+        padding: rem(12) rem(36);
+    }
+}

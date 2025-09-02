@@ -6,7 +6,12 @@
         padding-block: rem(60);
     }
 
+    &__inspiration,
     &__product {
         padding-bottom: rem(60);
+    }
+
+    &__inspiration {
+        background-color: var(--color-primary-light-2);
     }
 }

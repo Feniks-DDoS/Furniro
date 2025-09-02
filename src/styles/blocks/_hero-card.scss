@@ -43,19 +43,12 @@
     }
 
     &__button {
-        color: var(--color-light);
         font-weight: 700;
-        font-size: rem(16);
-        background-color: var(--color-primary);
         text-transform: uppercase;
         padding: rem(25) rem(72);
 
         @include mobile {
             padding: rem(25);
-        }
-
-        @include hover {
-            opacity: 0.8;
         }
     }
 }

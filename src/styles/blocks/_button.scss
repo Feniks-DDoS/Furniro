@@ -20,4 +20,33 @@
         border: rem(1) solid var(--color-primary);
         }
     }
+
+    &--orange {
+        background-color: var(--color-primary);
+        color: var(--color-light);
+        font-weight: 600;
+        font-size: rem(16);
+        line-height: 1.5;
+
+        @include hover {
+            opacity: 0.8;
+        }
+    }
+
+    &--next {
+        right: 5%;
+
+        @include mobile {
+            right: 0;
+        }
+    }
+
+    &--prev {
+        &.hide {
+            opacity: 0;
+        }
+        &.show {
+            opacity: 1;
+        }
+    }
 }
