@@ -1,6 +1,7 @@
 import { useState } from "react"
 import SliderSlide from "./SliderSlide.jsx"
 import { sliderImage } from "@/data/sliderImage.js"
+import MatchMedia from "@/utils/MatchMedia.js"
 
 const Slider = () => {
 
@@ -27,7 +28,7 @@ const Slider = () => {
                 <ul 
                 className="slider__list" 
                  style={{
-                        transform: `translateX(-${currentIndex * 396}px)`, // 372px + 24px gap
+                        transform: `translateX(-${MatchMedia.mobileS ? currentIndex * 320 : currentIndex * 396}px)`, 
                         transition: "transform 0.5s ease",
                     }}>
                     {sliderImage.map((item , index) => (                        
@@ -41,7 +42,7 @@ const Slider = () => {
                 </ul>
             </div>
 
-            <button onClick={prevSlide} className={`slider__button button button--prev ${currentIndex > 0 ? 'show' : 'hide'}`}>
+            <button onClick={prevSlide} className={`slider__button button button--prev ${MatchMedia.tablet ? 'show' : currentIndex > 0 ? 'show' : 'hide'}`}>
                 <svg className="slider__button-prev-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.00006 5L16.0001 12L9.00006 19" stroke="#B88E2F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

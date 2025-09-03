@@ -4,6 +4,8 @@ import Product from "./layouts/Section/Product.jsx"
 import Range from "./layouts/Section/Range.jsx"
 import Inspiration from "./layouts/Section/Inspiration.jsx"
 import "./styles/main.scss"
+import Furniture from "./layouts/Section/Furniture.jsx"
+import Footer from "./layouts/Footer/Footer.jsx"
 
 function App() {
 
@@ -14,6 +16,8 @@ function App() {
      <Range/>
      <Product/>
      <Inspiration/>
+     <Furniture/>
+     <Footer/>
     </>
   )
 }

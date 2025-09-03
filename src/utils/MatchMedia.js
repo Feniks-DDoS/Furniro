@@ -10,6 +10,9 @@ const MatchMedia = {
   get mobile() {
     return window.matchMedia(`(max-width: ${PxToRem(767.98)}rem)`).matches
   },
+  get mobileS() {
+    return window.matchMedia(`(max-width: ${PxToRem(500.98)}rem)`).matches
+  },
 }
 
 export default MatchMedia

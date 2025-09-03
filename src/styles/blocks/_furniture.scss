@@ -1,0 +1,30 @@
+@use '../helpers' as *;
+
+.furniture {
+
+    &__header {
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: rem(8);
+    }
+
+    &__title {
+        color: var(--color-dark-card);
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: rem(20);
+        line-height: 1.5;
+        color: var(--color-gray-2);        
+    }
+
+    &__image {
+        @include mobile-s {
+            padding-top: rem(44);
+        }
+    }
+}

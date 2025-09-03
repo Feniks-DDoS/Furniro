@@ -33,9 +33,14 @@
         &.active {
             width: rem(404);
             height: rem(582);
+
+            @include tablet {
+            width: rem(304);
+            height: rem(482);
+
+            }
         }
     }
-
     &__images {
         width: 100%;
         &-action,
@@ -84,7 +89,13 @@
         height: 100%;
 
         &:not(.active) {
-            max-height: rem(486)
+            max-height: rem(486);
+
+            @include tablet {
+            max-height: rem(386);
+            max-width: rem(272)
+
+            }
         }
     }
 
@@ -106,7 +117,7 @@
         }
 
         &-prev-svg {
-            rotate: 180deg;
+            rotate: 180deg;            
         }
     }
 

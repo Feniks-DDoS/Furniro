@@ -4,7 +4,7 @@ import { cardItem } from "@/data/cardItem.js"
 import Discount from "./UI/Discount.jsx"
 import NewProduct from "./UI/NewProduct.jsx"
 import { useState } from "react"
-import MatchMedia from "@/utils/MatchMedia copy.js"
+import MatchMedia from "@/utils/MatchMedia.js"
 
 const CardItem = () => {
 
