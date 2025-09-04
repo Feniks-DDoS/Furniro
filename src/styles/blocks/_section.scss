@@ -19,4 +19,9 @@
         padding-top: rem(60);
         padding-bottom: rem(50);
     }
+
+    &__error {
+        padding-block: rem(50);
+        background-color: var(--color-primary-light);
+    }
 }

@@ -1,23 +1,18 @@
-import Header from "./layouts/Header/Header.jsx"
-import Hero from "./layouts/Section/Hero.jsx"
-import Product from "./layouts/Section/Product.jsx"
-import Range from "./layouts/Section/Range.jsx"
-import Inspiration from "./layouts/Section/Inspiration.jsx"
 import "./styles/main.scss"
-import Furniture from "./layouts/Section/Furniture.jsx"
+import { BrowserRouter } from "react-router-dom"
+import Header from "./layouts/Header/Header.jsx"
 import Footer from "./layouts/Footer/Footer.jsx"
+import AppRoute from "./components/AppRoute.jsx"
 
 function App() {
 
   return (
     <>
-     <Header />
-     <Hero />
-     <Range/>
-     <Product/>
-     <Inspiration/>
-     <Furniture/>
-     <Footer/>
+    <BrowserRouter  basename="/Furniro">
+      <Header />
+      <AppRoute/>
+      <Footer/>
+     </BrowserRouter>
     </>
   )
 }

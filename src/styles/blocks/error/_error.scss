@@ -1,0 +1,50 @@
+@use '../../helpers' as *;
+
+
+.error {
+    
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(20);
+    }
+
+    &__header {
+        max-width: rem(373);
+
+        @include tablet {
+            max-width: 100dvw;
+        }
+    }
+
+    &__body {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+
+        &-span {
+            font-weight: 700;
+        }
+    }
+
+    &__subtitle {
+        padding-top: rem(50);
+        padding-bottom: rem(75);
+        @include fluid-text(22, 18);
+        color: var(--color-gray-2);
+    }
+
+    &__button {
+        @include fluid-text(26 , 20);
+
+        padding-inline: rem(73);
+        padding-block: rem(23);
+        border-radius: rem(5);
+        font-weight: 700;        
+    }
+}

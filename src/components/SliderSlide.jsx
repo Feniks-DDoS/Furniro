@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const SliderSlide = ({ item , index , currentIndex}) => {
 
   return (
@@ -21,11 +23,11 @@ const SliderSlide = ({ item , index , currentIndex}) => {
                         <p className="slider__images-subtitle">{`0${item.slideNumber} - ${item.title}`}</p>
                     </div>
                     <div className="slider__images-action">                                            
-                        <a href="#" className="slider__images-button button button--orange">
+                        <Link to="/shop" className="slider__images-button button button--orange">
                             <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M19 7H1M19 7L13 1M19 7L13 13" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </>
             )}

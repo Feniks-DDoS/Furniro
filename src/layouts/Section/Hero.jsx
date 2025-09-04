@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom"
+
 const Hero = () => {
   return (
-    <section className="section">
+    <section className="section" aria-labelledby="hero-title">
         <div className="section__inner">
     <div className="hero" aria-labelledby="card-title">
         <div className="hero__inner">
@@ -20,13 +22,13 @@ const Hero = () => {
                     <div className="card__inner">
                         <div className="card__header">
                             <p className="card__subtitle">New Arrival</p>
-                            <h1 className="card__title" id="card-title">Discover Our <br /> New Collection</h1>
+                            <h1 className="card__title" id="hero-title">Discover Our <br /> New Collection</h1>
                             <div className="card__description">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
                             </div>
                         </div>
                         <div className="card__extra">
-                            <a href="/" className="card__button button button--orange">BUY Now</a>
+                            <Link to="/shop" className="card__button button button--orange">BUY Now</Link>
                         </div>
                     </div>
                 </div>

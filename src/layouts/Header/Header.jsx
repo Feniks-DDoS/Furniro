@@ -1,4 +1,4 @@
-import BurgerButton from "@/components/BurgerButton"
+import BurgerButton from "@/components/BurgerButton.jsx"
 import HeaderNavigation from "@/components/header/HeaderNavigation.jsx"
 
 const Header = () => {

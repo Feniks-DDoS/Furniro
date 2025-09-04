@@ -14,15 +14,17 @@ const BurgerButton = () => {
         if(isOpen) {
             document.documentElement.classList.add('is-lock') 
             document.querySelectorAll('overlay').forEach((element) => {
-                element.classList.add('is-show')
-            })  
+            element.classList.add('is-show')
+            })              
         }else {
             document.documentElement.classList.remove('is-lock')
             document.querySelectorAll('overlay').forEach((element) => {
-                element.classList.remove('is-show')
-            }) 
+            element.classList.remove('is-show')
+            })
         }
     }, [isOpen])
+
+
   return (
     <>
     <button onClick={toggleMenu} type="button" 

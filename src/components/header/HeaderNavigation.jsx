@@ -1,5 +1,6 @@
 import HeaderMenu from "./HeaderMenu.jsx"
 import HeaderUserMenu from "./HeaderUserMenu.jsx"
+import { Link } from "react-router-dom"
 
 const HeaderNavigation = () => {
 
@@ -8,7 +9,7 @@ const HeaderNavigation = () => {
     <>
     <nav className="header__menu">
       <div className="header__start">     
-          <a href="/" className="header__link">
+          <Link to="/" className="header__link">
           <img src="./icons/logo/logo.svg" 
           alt="Home" 
           className="header__logo logo" 
@@ -16,7 +17,7 @@ const HeaderNavigation = () => {
           aria-label="Home"
           title="Home"
           />
-          </a>
+          </Link>
       </div>
     <HeaderMenu />
     <HeaderUserMenu />

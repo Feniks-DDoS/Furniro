@@ -1,4 +1,5 @@
 import CardList from "@/components/CardList.jsx"
+import { Link } from "react-router-dom"
 
 
 const Product = () => {
@@ -20,7 +21,7 @@ const Product = () => {
                         </div>
                     </div>
                     <div className="product__extra">
-                        <a href="/" className="product__button button">Show More</a>
+                        <Link to="/shop" className="product__button button">Show More</Link>
                     </div>
                 </div>
             </div>
