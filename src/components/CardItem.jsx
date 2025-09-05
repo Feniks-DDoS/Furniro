@@ -5,10 +5,12 @@ import Discount from "./UI/Discount.jsx"
 import NewProduct from "./UI/NewProduct.jsx"
 import { useState } from "react"
 import MatchMedia from "@/utils/MatchMedia.js"
+import { useLocation } from "react-router-dom"
 
 const CardItem = () => {
 
     const [hoveredId , setHoveredId] = useState(null)
+    const location = useLocation()
 
 
     const isPointerEnter = (id) => setHoveredId(id)
@@ -23,7 +25,7 @@ const CardItem = () => {
         key={item.id} 
         className={`product__card-item ${hoveredId === item.id ? 'hovered' : ''}`}>
             <div className="product__card-header" style={{zIndex: hoveredId === item.id ? -1 : 0}}>
-                <picture className="product__card-images">
+                <picture className="product__card-images" key={location.pathname}>
                     <source srcSet={item.source.srcSet} type={item.source.type} />
                     <img 
                     src={item.img.src} 

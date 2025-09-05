@@ -1,13 +1,16 @@
-import { Link } from "react-router-dom"
+import { Link , useLocation} from "react-router-dom"
 
 const Hero = () => {
+
+    const location = useLocation()
+
   return (
     <section className="section" aria-labelledby="hero-title">
         <div className="section__inner">
     <div className="hero" aria-labelledby="card-title">
         <div className="hero__inner">
             <div className="hero__main hidden-mobile">
-                <picture className="hero__images">
+                <picture className="hero__images" key={location.pathname}>
                     <source srcSet="./images/hero/avif/hero.avif" type="image/avif"/>
                     <img 
                     src="./images/hero/jpg/hero.jpg" 

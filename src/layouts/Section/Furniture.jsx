@@ -1,4 +1,9 @@
+import { useLocation } from "react-router-dom"
+
 const Furniture = () => {
+
+    const location = useLocation()
+
   return (
     <section className="section section__furniture" aria-labelledby='furniture-title'>
         <div className="section__inner">
@@ -10,6 +15,7 @@ const Furniture = () => {
                 <div className="furniture__body">
                     <div className="furniture__body-inner">
                         <img 
+                        key={location.pathname}
                         src="./images/furnitur/1.png" 
                         alt=""
                         width={1900}

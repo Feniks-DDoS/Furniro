@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link , useLocation } from "react-router-dom"
 
 const SliderSlide = ({ item , index , currentIndex}) => {
+
+    const location = useLocation()
 
   return (
     <>
         <li 
         className={`slider__slides ${index === currentIndex ? 'active' : ''}`}>
-            <picture className="slider__images">
+            <picture className="slider__images" key={location.pathname}>
                 <source srcSet={item.source.srcSet} type={item.source.type} />
                 <img 
                 src={item.img.src} 

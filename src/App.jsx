@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <BrowserRouter  basename="/Furniro">
+    <BrowserRouter>
       <Header />
       <AppRoute/>
       <Footer/>

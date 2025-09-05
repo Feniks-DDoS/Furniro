@@ -1,13 +1,17 @@
 import { rangeImages } from "@/data/range.js"
+import { useLocation } from "react-router-dom"
 
 const RangeBody = () => {
+
+  const location = useLocation()
+
   return (
       <div className="range__body">
           <div className="range__body-inner">
             {rangeImages.map(e => (
                 <div  key={e.id} className="range__card">
                   <div className="range__card-inner">
-                  <picture  className={`range__images ${e.className}`}>
+                  <picture  className={`range__images ${e.className}`} key={location.pathname}>
                     <source srcSet={e.sources.srcSet} type={e.sources.type}/>                       
                      <img 
                         src={e.img.scr} 
