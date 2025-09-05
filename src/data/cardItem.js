@@ -139,3 +139,10 @@ cardItem.forEach(item => {
       item.discountPrice = Math.round(item.totalPrice * (1 - discount))
    }
 })
+
+const formatter = new Intl.NumberFormat("de-DE")
+
+cardItem.forEach(item => {
+   item.totalPrice = formatter.format(item.totalPrice)
+   item.discountPrice = formatter.format(item.discountPrice)
+})
